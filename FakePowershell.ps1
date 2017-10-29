@@ -1,29 +1,29 @@
-function Check
+function newcmd
 {
 Write-Host "PS $d> " -NoNewline
 $c = Read-Host
 If ($c  -contains 'ls'){
 ls
 Write-Host $Fine
-Check
+newcmd
 }
 If ($c  -contains 'netstat'){
 netstat
 Write-Host $Bad
-Check
+newcmd
 }
 If ($c  -contains 'syskey'){
 netstat
 Write-Host $Bad
-Check
+newcmd
 }
 If ($c  -contains 'dir'){
 dir
 Write-Host $Fine
-Check
+newcmd
 }
 if(!$ignoreothercommands){if ($c) {Invoke-Expression $c}}
-Check
+newcmd
 }
 $host.ui.RawUI.WindowTitle = "Windows PowerShell"
 #Config start
@@ -34,4 +34,4 @@ $Bad = "Be careful an scammers ip address was seen contected to this machine - $
 #Config end
 $d = get-location
 Write-Host "Windows PowerShell`nCopyright (C) 2016 Microsoft Corporation. All rights reserved.`n"
-Check
+newcmd
