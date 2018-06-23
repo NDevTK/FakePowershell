@@ -30,7 +30,7 @@ $host.ui.RawUI.WindowTitle = "Windows PowerShell"
 $av = "AVG Antivirus"
 $ignoreothercommands = $false
 $Fine = "Your pc is fine all files are clean - $av"
-$Bad = "Be careful an scammers ip address was seen contected to this machine - $av"
+$Bad = "Be careful a scammers ip address was seen connected to this machine - $av"
 #Config end
 $d = get-location
 Write-Host "Windows PowerShell`nCopyright (C) 2016 Microsoft Corporation. All rights reserved.`n"
